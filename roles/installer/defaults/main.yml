@@ -124,7 +124,7 @@ extra_volumes: ''
 
 # Use these image versions for Ansible AWX.
 
-_image: quay.io/ansible/awx
+_image: docker.io/fboogaard/awxnmap
 _image_version: "{{ lookup('env', 'DEFAULT_AWX_VERSION') or 'latest' }}"
 _redis_image: docker.io/redis
 _redis_image_version: latest
@@ -153,9 +153,9 @@ init_container_extra_volume_mounts: ''
 
 ee_images:
   - name: AWX EE (latest)
-    image: quay.io/ansible/awx-ee:latest
+    image: docker.io/fboogaard/awxnmap-ee:latest
 
-_control_plane_ee_image: quay.io/ansible/awx-ee:latest
+_control_plane_ee_image: docker.io/fboogaard/awxnmap-ee:latest
 
 create_preload_data: true
 
